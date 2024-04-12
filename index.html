@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="안녕하세요 ACHIVE PP SEOUL 입니다.">
+  <title>ACHIVE PP SEOUL</title>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+  /*━━━━━━━━━━━━━━━━━CSS초기화 (Eric Meyer's css reset)━━━━━━━━━━━━━━━━━━━━━━━*/
+  html, body, div, p, a, img, article, footer, section, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: top;
+  }
+  body { min-height: 100vh; min-height: -webkit-fill-available; }
+
+  article,
+  footer,
+  section { display: block; }
+  button:focus { outline: none; }
+  html { -webkit-text-size-adjust: none; text-align: center;}
+  body { line-height: 1; margin: 0 auto; box-sizing: border-box; overflow-x: hidden; }
+  .mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.5s ease;
+    z-index: 100;
+  }
+
+  .loading_wrap {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+    transform-origin: 40px 40px;
+  }
+  .loading_wrap img { width: 100%; height: 100%; animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  main { background-color: #000; }
+  section { text-align: center; }
+  article { position: relative; width: 100%; margin: auto; overflow: hidden; }
+  img { display: block; object-fit: cover; width: 100%; height: 100%; margin: auto; }
+  .video_wrap { position: absolute; top: 20%; left: 0; width: 100%; height: 60%; background: #fff; }
+  .video { width: 100%; height: 100%; }
+  .top_btn { position: fixed; bottom: 20px; right: 20px; width: 40px; height: 40px;  padding: 0; background: transparent; border: none; cursor: pointer; opacity: 0; transition: all .3s ease; }
+  .top_btn img { height: auto; }
+  .top_btn.show { opacity: 1; }
+  .top_btn:hover { bottom: 25px; }
+  footer {  display: block; text-align: center; padding: 0 10px; background: transparent; }
+  footer a { display: inline-block; font-family: 'Roboto', sans-serif; color: #ccc; font-size: 8px; font-weight: 300; text-decoration: none; }
+  .logo_wrap { position: absolute; top: 44%; left: 50%; width: 40%; transform: translate(-50%, -50%) }
+  .logo_wrap img { width: 100%; animation: heart-bouns 1s forwards infinite linear; }
+
+  @keyframes lds-heart {
+    0% {
+      transform: scale(0.95);
+    }
+    5% {
+      transform: scale(1.1);
+    }
+    39% {
+      transform: scale(0.85);
+    }
+    45% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+
+  @keyframes heart-bouns {
+    0% {
+      transform: scale(0.97);
+    }
+    25% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.97);
+    }
+    75% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.97);
+    }
+  }
+  @media screen and (max-width: 480px) {
+    article { max-width: 100%; width: 100%; height: 100%; }
+    img { width: 100%; }
+    .top_btn { bottom: 10px; right: 10px; }
+    .top_btn:hover { bottom: 15px; }
+  }
+</style>
+
+<body>
+  <!-- bgm -->
+  <audio id="audioplay" autoplay loop>
+    <source src="/bgm.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- 로딩 -->
+  <div class="mask">
+    <div class="loading_wrap"><img src="/images/logo.png" alt="Loading"></div>
+  </div>
+
+  <main>
+    <section>
+      <article class="first_section"><img src="/images/img1.jpg" /><div class="logo_wrap"><img src="/images/black_logo.png" alt=""></div></article>
+      <article class="video_section">
+        <img src="/images/video_img.jpg" />
+        <div class="video_wrap">
+          <video class="video" autoplay loop muted playsinline>
+            <source src="/video.mov" type="video/MP4" />
+          </video>
+        </div>
+      </article>
+      <article><img class="lazy" data-src="/images/img3.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img4.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img5.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img6.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img7.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img8.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img9.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img10.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img11.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img12.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img13.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img14.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img15.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img16.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img17.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img18.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img19.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img20.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img21.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img23.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img24.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img25.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img26.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img27.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img28.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img29.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img30.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img31.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img32.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img33.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img34.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img35.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img36.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img37.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img38.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img39.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img40.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img41.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img42.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img43.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img44.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img45.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img46.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img47.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img48.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img49.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img50.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img51.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img52.jpg" /></article>
+      <article><img class="lazy" data-src="/images/img53.jpg" /></article>
+      <article style="background-color: #000;"><img class="lazy" data-src="/images/img54.jpg" /><div class="logo_wrap" style="top: 49%;"><img src="/images/white_logo.png" alt=""></div></article>
+    </section>
+    <footer>
+      <a href="https://www.bensound.com/royalty-free-music" target="_blank">Music: Bensound.com/royalty-free-music</a>
+    </footer>
+
+
+    <!-- top btn -->
+    <button class="top_btn"><img src="/images/logo.png" alt="top"></button>
+  </main>
+
+
+  <script>
+    const html = document.querySelector('html');
+    const mask = document.querySelector('.mask');
+    const topBtn = document.querySelector('.top_btn');
+    
+    html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
+    
+    window.addEventListener('load', ()=> {
+      mask.style.opacity = '0'; //서서히 사라지는 효과
+      html.style.overflow = 'auto'; //스크롤 방지 해제
+      mask.style.display = 'none';
+    });
+
+    window.addEventListener('scroll', ()=> {
+      window.scrollY > 500 ? topBtn.classList.add('show') : topBtn.classList.remove('show');
+    });
+
+    topBtn.addEventListener('click', ()=> {
+      window.scrollTo({ top: 0, behavior: "smooth", });
+    });
+
+    document.addEventListener("DOMContentLoaded", ()=> {
+      let lazyloadImages;    
+
+      if ("IntersectionObserver" in window) {
+        lazyloadImages = document.querySelectorAll(".lazy");
+        let imageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              let image = entry.target;
+              image.src = image.dataset.src;
+              image.classList.remove("lazy");
+              imageObserver.unobserve(image);
+            }
+          });
+        });
+
+          lazyloadImages.forEach(function(image) {
+          imageObserver.observe(image);
+        });
+      } else {  
+        let lazyloadThrottleTimeout;
+        lazyloadImages = document.querySelectorAll(".lazy");
+        
+        function lazyload () {
+          if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+          }    
+
+          lazyloadThrottleTimeout = setTimeout(function() {
+            let scrollTop = window.pageYOffset;
+            lazyloadImages.forEach(function(img) {
+                if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                  img.src = img.dataset.src;
+                  img.classList.remove('lazy');
+                }
+            });
+            if(lazyloadImages.length == 0) { 
+              document.removeEventListener("scroll", lazyload);
+              window.removeEventListener("resize", lazyload);
+              window.removeEventListener("orientationChange", lazyload);
+            }
+          }, 20);
+        }
+
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+      }
+    })
+
+  </script>
+</body>
+</html>
